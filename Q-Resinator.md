@@ -2,7 +2,7 @@
 
 #### Overview
 
-This project is a theoretical exploration into building a two-qubit quantum computer using a green diode laser, an ESP32 microcontroller, an AD9850 DDS module, and two separate natural quartz crystals. We hypothesize that the quantized mechanical vibrations of the quartz crystals can serve as our qubits, which are controlled and measured using our available components.
+This project is a theoretical exploration into building a two-qubit quantum computer using a green diode laser, an ESP32 microcontroller, an AD9850 DDS module, and two separate synthetic quartz crystals. We hypothesize that the quantized mechanical vibrations of the quartz crystals can serve as our qubits, which are controlled and measured using our available components.
 
 ---
 
@@ -83,7 +83,8 @@ Our theoretical quantum computer would run the **Deutsch-Jozsa algorithm**. The
     2. **Conditional Pulse:** Based on the measurement, the ESP32 would decide whether to send a pulse to the second quartz plate.
         
     3. **Perform X-Gate (if necessary):** If the measurement shows the control qubit is in the ∣1⟩ state, the ESP32 would command the AD9850 to send a precise RF pulse (a "pi-pulse") to the second plate, effectively flipping its state.
-        
+
+CCD Measurement Setup: We would use a camera, like a Sony a7III, to capture the interference pattern from the interferometer. The lens would be removed to get the pattern directly on the CCD sensor. The camera would then stream the live video data to a computer, where a theoretical AI could be used to analyze the pattern to determine the quantum state.
 
 ### Final Implementation: Deutsch-Jozsa Algorithm
 

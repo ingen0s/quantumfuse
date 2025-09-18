@@ -8,52 +8,52 @@ This project is a theoretical exploration into building a two-qubit quantum comp
 
 #### Core Components
 
-- **ESP32 Microcontroller:** Serves as the classical control unit. It sends precise timing signals and commands to the AD9850 to execute quantum gates.
+- **ESP32 Microcontroller:** Serves as the classical control unit. It sends precise timing signals and commands to the AD9850 to execute quantum gates.
     
-- **AD9850 DDS Module:** Generates the radio frequency (RF) signals that will drive the piezoelectric vibrations of the quartz.
+- **AD9850 DDS Module:** Generates the radio frequency (RF) signals that will drive the piezoelectric vibrations of the quartz.
     
-- **Green Diode Laser:** Used for the theoretical **interferometric measurement** of the qubit's vibrational state.
+- **Green Diode Laser:** Used for the theoretical **interferometric measurement** of the qubit's vibrational state.
     
-- **Piezoelectric Pickup Discs:** Two discs, each acting as both an actuator (to initiate vibrations) and a sensor (to read back signals) for a separate quartz plate.
+- **Piezoelectric Pickup Discs:** Two discs, each acting as both an actuator (to initiate vibrations) and a sensor (to read back signals) for a separate quartz plate.
     
-- **Natural Quartz Crystals:** Two separate plates, each **50mm x 50mm x 1mm**, serving as the material for our qubits. We determined that using **synthetic quartz** would be better for a real-world project.
+- **Synthetic Quartz Crystals:** Two separate plates, each **50mm x 50mm x 1mm**, serving as the material for our qubits.
     
 
 ---
 
 #### Theoretical Qubit Design
 
-Each quartz plate has a single, isolated **mechanical vibrational mode** that acts as our qubit. The two quantum states, ∣0⟩and ∣1⟩, would correspond to the ground state of vibration and the first excited state (a single phonon). The 1mm thickness of the plates gives them a fundamental resonant frequency in the MHz range, which is perfectly suited for the AD9850.
+Each quartz plate has a single, isolated **mechanical vibrational mode** that acts as our qubit. The two quantum states, ∣0⟩ and ∣1⟩, would correspond to the ground state of vibration and the first excited state (a single phonon). The 1mm thickness of the plates gives them a fundamental resonant frequency in the MHz range, which is perfectly suited for the AD9850.
 
 ---
 
 #### Quantum Operations
 
-- **Single-Qubit Gates:** The ESP32 would command the AD9850 to produce a precise RF pulse with a specific duration and frequency, which is sent to one of the piezoelectric discs. This pulse would cause that quartz plate to vibrate, theoretically rotating the qubit's state.
+- **Single-Qubit Gates:** The ESP32 would command the AD9850 to produce a precise RF pulse with a specific duration and frequency, which is sent to one of the piezoelectric discs. This pulse would cause that quartz plate to vibrate, theoretically rotating the qubit's state.
     
-- **Two-Qubit Gates:** We would make the two separate quartz plates interact. For example, by pulsing one qubit to create a specific vibrational state, we could theoretically couple it to the other plate, performing a controlled gate like a CNOT. The ESP32 would also need to independently switch between the two plates to address them individually.
+- **Two-Qubit Gates:** We would make the two separate quartz plates interact. For example, by pulsing one qubit to create a specific vibrational state, we could theoretically couple it to the other plate, performing a controlled gate like a CNOT. The ESP32 would also need to independently switch between the two plates to address them individually.
     
 
 ---
 
 #### Quantum Algorithm
 
-Our theoretical quantum computer would run the **Deutsch-Jozsa algorithm**. The ESP32 would coordinate the sequence of RF pulses and laser measurements to determine whether a hypothetical black-box function is "constant" or "balanced" in a single run.
+Our theoretical quantum computer would run the **Deutsch-Jozsa algorithm**. The ESP32 would coordinate the sequence of RF pulses and laser measurements to determine whether a hypothetical black-box function is "constant" or "balanced" in a single run.
 
 ---
 
 #### Experiment Update Log
 
-- **September 17, 2025:** I hooked up one piezo pickup to one plate and set the **ICL8038** to cycle at 10 Hz. I shined a green laser diode onto the plate at an angle to reflect to a piece of paper. Each time the cycle turned to 10 Hz, the laser projection shifted partially, and each time it returned to 0 Hz, it shifted back. The shifts are almost perfect with slight variations. We also discovered that using a square wave from the ICL8038 had a more noticeable effect than a sine wave because it excited multiple harmonics.
+- **September 17, 2025:** I hooked up one piezo pickup to one plate and set the **ICL8038** to cycle at 10 Hz. I shined a green laser diode onto the plate at an angle to reflect to a piece of paper. Each time the cycle turned to 10 Hz, the laser projection shifted partially, and each time it returned to 0 Hz, it shifted back. The shifts are almost perfect with slight variations. We also discovered that using a square wave from the ICL8038 had a more noticeable effect than a sine wave because it excited multiple harmonics.
     
-- **September 18, 2025:** We've introduced a new theoretical concept: using a second, smaller quartz crystal with its own piezo pickup as a **quantum beam splitter**. By carefully pulsing this crystal with the **AD9850**, its vibrations would alter the phase of the laser light reflecting off it. This allows us to perform a **quantum gate directly on the photon**, which adds a new dimension to our quantum operations.
+- **September 18, 2025:** We've introduced a new theoretical concept: using a second, smaller quartz crystal with its own piezo pickup as a **quantum beam splitter**. By carefully pulsing this crystal with the **AD9850**, its vibrations would alter the phase of the laser light reflecting off it. This allows us to perform a **quantum gate directly on the photon**, which adds a new dimension to our quantum operations.
     
 
 ---
 
 #### Physical Implementation Sketches
 
-- **Hadamard Gate Sketch:** This conceptual code outlines how the ESP32 would command the AD9850 to create a quantum gate pulse, specifically a **Hadamard gate** which puts a qubit into a superposition.
+- **Hadamard Gate Sketch:** This conceptual code outlines how the ESP32 would command the AD9850 to create a quantum gate pulse, specifically a **Hadamard gate** which puts a qubit into a superposition.
     
     C++
     
@@ -76,15 +76,18 @@ Our theoretical quantum computer would run the **Deutsch-Jozsa algorithm**. The
     }
     ```
     
-- **Two-Qubit CNOT Gate Sketch:** A **Controlled-NOT (CNOT) gate** flips the state of a "target" qubit if and only if the "control" qubit is in the ∣1⟩ state. In our theoretical setup, this means we would only pulse the second quartz plate if the first plate is vibrating. The ESP32 would need to perform a sequence of precise operations:
+- **Two-Qubit CNOT Gate Sketch:** A **Controlled-NOT (CNOT) gate** flips the state of a "target" qubit if and only if the "control" qubit is in the ∣1⟩ state. In our theoretical setup, this means we would only pulse the second quartz plate if the first plate is vibrating. The ESP32 would need to perform a sequence of precise operations:
     
-    1. **Read Control Qubit:** The ESP32 would briefly activate the laser interferometer for the first quartz plate. It would analyze the interference pattern to theoretically determine if the plate is in the ∣0⟩ or ∣1⟩ state.
+    1. **Read Control Qubit:** The ESP32 would briefly activate the laser interferometer for the first quartz plate. It would analyze the interference pattern to theoretically determine if the plate is in the ∣0⟩ or ∣1⟩ state.
         
-    2. **Conditional Pulse:** Based on the measurement, the ESP32 would decide whether to send a pulse to the second quartz plate.
+    2. **Conditional Pulse:** Based on the measurement, the ESP32 would decide whether to send a pulse to the second quartz plate.
         
-    3. **Perform X-Gate (if necessary):** If the measurement shows the control qubit is in the ∣1⟩ state, the ESP32 would command the AD9850 to send a precise RF pulse (a "pi-pulse") to the second plate, effectively flipping its state.
+    3. **Perform X-Gate (if necessary):** If the measurement shows the control qubit is in the ∣1⟩ state, the ESP32 would command the AD9850 to send a precise RF pulse (a "pi-pulse") to the second plate, effectively flipping its state.
+        
+- **CCD Measurement Setup:** We would use a camera, like a **Sony a7III**, to capture the interference pattern from the interferometer. The lens would be removed to get the pattern directly on the **CCD sensor**. The camera would then stream the live video data to a computer, where a theoretical **AI** could be used to analyze the pattern to determine the quantum state.
+    
 
-CCD Measurement Setup: We would use a camera, like a Sony a7III, to capture the interference pattern from the interferometer. The lens would be removed to get the pattern directly on the CCD sensor. The camera would then stream the live video data to a computer, where a theoretical AI could be used to analyze the pattern to determine the quantum state.
+---
 
 ### Final Implementation: Deutsch-Jozsa Algorithm
 

@@ -1,5 +1,8 @@
 
-https://github.com/user-attachments/assets/c0264713-1d2c-4313-81e8-0e0215bad925
+https://github.com/user-attachments/assets/e9e66469-74c2-4346-a94c-7afd6688c967
+
+
+
 Example of an 823 mHz - 100 Hz pulse
 
 # Quantum Fuse: A Two-Qubit Quantum Computer

@@ -48,7 +48,19 @@ Our theoretical quantum computer would run the **Deutsch-Jozsa algorithm**. The 
     
 - **September 18, 2025:** We've introduced a new theoretical concept: using a second, smaller quartz crystal with its own piezo pickup as a **quantum beam splitter**. By carefully pulsing this crystal with the **AD9850**, its vibrations would alter the phase of the laser light reflecting off it. This allows us to perform a **quantum gate directly on the photon**, which adds a new dimension to our quantum operations.
 
-- **September 20, 2025:** Realized that we can switch the polarity of the crystal, allowing for 4 states on one crystal 'bed'
+- **September 20, 2025:** Realized that we can switch the polarity of the crystal, allowing for 4 states on one crystal 'bed'.
+    - Idle (Positive Polarity): The crystal is in its ground vibrational state (∣0⟩) and the piezo is configured for a positive-going force (stretch).
+    - Excited (Positive Polarity): The crystal is in its excited vibrational state (∣1⟩) and the piezo is still configured for a positive-going force.
+    - Idle (Negative Polarity): The crystal is in its ground vibrational state (∣0⟩) and the piezo is configured for a negative-going force (compression).
+    - Excited (Negative Polarity): The crystal is in its excited vibrational state (∣1⟩) and the piezo is configured for a negative-going force.
+- **September 21, 2025:** Successfully created a Gaussian splat with nerfstudio.
+    - The idea is to be able to map the entire surface are of the crystal in all 3 states (+, -, idle).
+    - Each crystal has a unique set of quantum wells that we can plot coordinates for.
+- **September 24-26, 2025:** Starting creating piezo arrays for larger surface area stimulation.
+    - 1 piezo on crystal in center.
+    - 2 piezos arranged with grounds pointed towards center.
+    - 4 modified piezos arranged with grounds pointed towards center.
+        - Clipped on both x and y outer edges, so they fit snug in the middle of the plate.
 
 ---
 

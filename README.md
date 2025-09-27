@@ -6,7 +6,7 @@ The Q-Resonator is the core of this project's hypothesis. We are investigating w
 
 You can find the detailed theoretical framework and ongoing notes here: [Q-Resonator Documentation](https://github.com/ingen0s/quantumfuse/blob/main/Q-Resonator.md) ⚛️
 
-## Interferometer
+## Michelson Interferometer
 This project builds a functional Michelson interferometer to measure extremely small changes in distance, relying on the interference pattern of a green laser. The ESP32 microcontroller will be used to read and interpret the light intensity from a photodetector, allowing you to quantify changes in the optical path in units of a fraction of a wavelength.
 
 [Michelson interferometer](https://github.com/ingen0s/quantumfuse/blob/main/Michelson-Interferometer.md)

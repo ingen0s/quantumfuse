@@ -1,5 +1,4 @@
 
-https://github.com/user-attachments/assets/e0ccf47e-d3ac-456c-bfc6-77d08e66ef80
 # Quantum Fuse: A Two-Qubit Quantum Computer
 Quantum Fuse is a theoretical and experimental project exploring the feasibility of creating a two-qubit quantum computer using accessible and affordable components. Our unique approach utilizes quantized mechanical vibrations within synthetic quartz crystals to serve as our qubits. The project is built around an ESP32 microcontroller, a green diode laser, and an AD9850 DDS module.
 
@@ -9,6 +8,9 @@ Quantum Fuse is a theoretical and experimental project exploring the feasibility
 The Q-Resonator is the core of this project's hypothesis. We are investigating whether the quantum mechanical properties of synthetic quartz crystals can be leveraged to create and control qubits. The project aims to use the green diode laser to excite the quartz's vibrations and the DDS module to precisely control the frequencies involved, manipulating the quantum states.
 
 You can find the detailed theoretical framework and ongoing notes here: [Q-Resonator Documentation](https://github.com/ingen0s/quantumfuse/blob/main/Q-Resonator.md) ⚛️
+
+Example of an 823 mHz - 100 Hz pulse
+https://github.com/user-attachments/assets/e0ccf47e-d3ac-456c-bfc6-77d08e66ef80
 
 ## Michelson Interferometer
 This project builds a functional Michelson interferometer to measure extremely small changes in distance, relying on the interference pattern of a green laser. The ESP32 microcontroller will be used to read and interpret the light intensity from a photodetector, allowing you to quantify changes in the optical path in units of a fraction of a wavelength.
@@ -20,9 +22,5 @@ The code base provides the necessary firmware for the project's electronics. The
 
   -  Firmware: The web server code for the ESP32-S3 to control the AD985x DDS module can be found here: [AD985x Web Server Code](https://github.com/ingen0s/quantumfuse/blob/main/AD985X/web_server.ino)
 
-
-
-
-![832mHz Pulse](https://github.com/user-attachments/assets/e1145d35-5e43-48d9-ba57-86bb67e539bc)
 
 ![Q-Resonator](https://github.com/user-attachments/assets/596cce6c-0d1a-4744-a5cb-b6bc49421d15)

@@ -10,7 +10,8 @@ Quantum Fuse is a theoretical and experimental project exploring the feasibility
 
   - **If you are interested in contributing, would be fantastic - if a bunch of people try to do the build it would happen much faster.**
 
-## The Q-Resonator
+## The Q-Resonator: A microcontroller-driven Quantum System
+
 The Q-Resonator is the core of this project's hypothesis. We are investigating whether the quantum mechanical properties of synthetic quartz crystals can be leveraged to create and control qubits. The project aims to use the green diode laser to excite the quartz's vibrations and the DDS module to precisely control the frequencies involved, manipulating the quantum states.
 
 You can find the detailed theoretical framework and ongoing notes here: [Q-Resonator Documentation](https://github.com/ingen0s/quantumfuse/blob/main/Q-Resonator.md) ⚛️

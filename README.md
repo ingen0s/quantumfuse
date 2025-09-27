@@ -1,6 +1,8 @@
 # Quantum Fuse: A Two-Qubit Quantum Computer
 Quantum Fuse is a theoretical and experimental project exploring the feasibility of creating a two-qubit quantum computer using accessible and affordable components. Our unique approach utilizes quantized mechanical vibrations within synthetic quartz crystals to serve as our qubits. The project is built around an ESP32 microcontroller, a green diode laser, and an AD9850 DDS module.
 
+  - **If you are interested in contributing, would be fantastic - if a bunch of people try to do the build it would happen much faster.**
+
 ## The Q-Resonator
 The Q-Resonator is the core of this project's hypothesis. We are investigating whether the quantum mechanical properties of synthetic quartz crystals can be leveraged to create and control qubits. The project aims to use the green diode laser to excite the quartz's vibrations and the DDS module to precisely control the frequencies involved, manipulating the quantum states.
 

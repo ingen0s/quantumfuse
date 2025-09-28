@@ -23,7 +23,7 @@ This project is a theoretical exploration into building a two-qubit quantum comp
 
 #### Theoretical Qubit Design
 
-Each quartz plate has a single, isolated **mechanical vibrational mode** that acts as our qubit. The two quantum states, ∣0⟩ and ∣1⟩, would correspond to the ground state of vibration and the first excited state (a single phonon). The 1mm thickness of the plates gives them a fundamental resonant frequency in the MHz range, which is perfectly suited for the AD9850.
+Each quartz plate has a single, isolated **mechanical vibrational mode** that acts as our qubit. The two quantum states, ∣0⟩ and ∣1⟩, would correspond to the ground state of vibration and the first excited state (a single phonon). The 1mm thickness of the plates gives them a fundamental resonant frequency in the tested +200mHz-300kHz and possibly up to the MHz range, which is perfectly suited for the AD9850.
 
 ---
 

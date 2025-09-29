@@ -31,8 +31,8 @@ Each quartz plate has a single, isolated **mechanical vibrational mode** that ac
 
 #### Quantum Operations
 
-- **Single-Qubit Gates:** The ESP32 would command the AD9850 to produce a precise RF pulse with a specific duration and frequency, which is sent to one of the piezoelectric discs. This pulse would cause that quartz plate to vibrate, theoretically rotating the qubit's state.
-- **Polality-Controlled Gates**: We would use the ESP32 to control the polarity of the signal sent to the piezo disc. By switching the ground and AC connections, we could reverse the force applied to the quartz plate, causing it to compress instead of stretch (or vice-versa). This would allow us to create a new type of quantum gate that manipulates the qubit's state in a new way.
+- **Single-Qubit Gates:** The ICE40UP5K-B-EVN would command the AD9850 to produce a precise RF pulse with a specific duration and frequency, which is sent to one of the piezoelectric discs. This pulse would cause that quartz plate to vibrate, theoretically rotating the qubit's state.
+- **Polality-Controlled Gates**: We would use the ICE40UP5K-B-EVN to control the polarity of the signal sent to the piezo disc. By switching the ground and AC connections, we could reverse the force applied to the quartz plate, causing it to compress instead of stretch (or vice-versa). This would allow us to create a new type of quantum gate that manipulates the qubit's state in a new way.
 - **Two-Qubit Gates:** We would make the two separate quartz plates interact. For example, by pulsing one qubit to create a specific vibrational state, we could theoretically couple it to the other plate, performing a controlled gate like a CNOT. The ESP32 would also need to independently switch between the two plates to address them individually.
     
 
@@ -40,7 +40,7 @@ Each quartz plate has a single, isolated **mechanical vibrational mode** that ac
 
 #### Quantum Algorithm
 
-Our theoretical quantum computer would run the **Deutsch-Jozsa algorithm**. The ESP32 would coordinate the sequence of RF pulses and laser measurements to determine whether a hypothetical black-box function is "constant" or "balanced" in a single run.
+Our theoretical quantum computer would run the **Deutsch-Jozsa algorithm**. The ICE40UP5K-B-EVN would coordinate the sequence of RF pulses and laser measurements to determine whether a hypothetical black-box function is "constant" or "balanced" in a single run.
 
 ---
 

@@ -6,9 +6,11 @@ This project is a theoretical exploration into building a two-qubit quantum comp
 
 ---
 
-#### Core Components
+#### Core Components ( First run setup )
 
-- **ESP32 Microcontroller:** Serves as the classical control unit. It sends precise timing signals and commands to the AD9850 to execute quantum gates.
+- **ICE40UP5K-B-EVN** Serves as the classical control unit. It sends precise timing signals and commands to the AD9850 to execute quantum gates.
+     - Initially we were using an ESP32 as it advertises a fine-grained timing resolution of 1μs (theoretical limit of the core timer). The practical limit we learned is 20μs and 50μs.
+     - Switching over to FPGA board for faster control
     
 - **AD9850 DDS Module:** Generates the radio frequency (RF) signals that will drive the piezoelectric vibrations of the quartz.
     
@@ -17,7 +19,7 @@ This project is a theoretical exploration into building a two-qubit quantum comp
 - **Piezoelectric Pickup Discs:** Two discs, each acting as both an actuator (to initiate vibrations) and a sensor (to read back signals) for a separate quartz plate.
     
 - **Synthetic Quartz Crystals:** Two separate plates, each **50mm x 50mm x 1mm**, serving as the material for our qubits.
-    
+
 
 ---
 

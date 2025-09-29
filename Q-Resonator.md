@@ -58,13 +58,13 @@ Our theoretical quantum computer would run the **Deutsch-Jozsa algorithm**. The 
     
 - **September 20, 2025:** We've refined our understanding of how polarity control can be used to manipulate the qubit's state. While we initially theorized that polarity reversal could create a four-state qudit, we now understand that the quantum system remains a two-level qubit, defined by the energy eigenstates of the ground state (∣0⟩) and the first excited state (∣1⟩).
 
-Instead of creating new quantum states, polarity control offers a powerful new way to manipulate the existing ones. We can now precisely control the direction and phase of the applied mechanical force, allowing us to:
-
-1. Apply a positive pulse to induce a state change through a stretching force.
-
-2. Apply a negative pulse to induce the same state change through a compressive force.
-
-This gives us finer control over the quantum operations and may be instrumental in exploring advanced techniques such as squeezed states, where we manipulate the quantum noise of the system.
+    Instead of creating new quantum states, polarity control offers a powerful new way to manipulate the existing ones. We can now precisely control the direction and phase of the applied mechanical force, allowing us to:
+    
+    1. Apply a positive pulse to induce a state change through a stretching force.
+    
+    2. Apply a negative pulse to induce the same state change through a compressive force.
+    
+    This gives us finer control over the quantum operations and may be instrumental in exploring advanced techniques such as squeezed states, where we manipulate the quantum noise of the system.
         
 - **September 21, 2025:** Successfully created a Gaussian splat with nerfstudio.
     

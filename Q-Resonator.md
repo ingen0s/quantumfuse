@@ -56,17 +56,15 @@ Our theoretical quantum computer would run the **Deutsch-Jozsa algorithm**. The 
     
 - **September 18, 2025:** We've introduced a new theoretical concept: using a second, smaller quartz crystal with its own piezo pickup as a **quantum beam splitter**. By carefully pulsing this crystal with the **AD9850**, its vibrations would alter the phase of the laser light reflecting off it. This allows us to perform a **quantum gate directly on the photon**, which adds a new dimension to our quantum operations.
     
-- **September 20, 2025:** Realized that we can switch the polarity of the crystal, allowing for 4 states on one crystal 'bed'.
-    
-    - Idle (Positive Polarity): The crystal is in its ground vibrational state (∣0⟩) and the piezo is configured for a positive-going force (stretch).
-        
-    - Excited (Positive Polarity): The crystal is in its excited vibrational state (∣1⟩) and the piezo is still configured for a positive-going force.
-        
-    - Idle (Negative Polarity): The crystal is in its ground vibrational state (∣0⟩) and the piezo is configured for a negative-going force (compression).
-        
-    - Excited (Negative Polarity): The crystal is in its excited vibrational state (∣1⟩) and the piezo is configured for a negative-going force.
-    
-    - The polarity reversal does not create two new, distinct quantum energy levels; the system remains a two-level qubit (a qudit of dimension D=2)
+- **September 20, 2025:** We've refined our understanding of how polarity control can be used to manipulate the qubit's state. While we initially theorized that polarity reversal could create a four-state qudit, we now understand that the quantum system remains a two-level qubit, defined by the energy eigenstates of the ground state (∣0⟩) and the first excited state (∣1⟩).
+
+Instead of creating new quantum states, polarity control offers a powerful new way to manipulate the existing ones. We can now precisely control the direction and phase of the applied mechanical force, allowing us to:
+
+1. Apply a positive pulse to induce a state change through a stretching force.
+
+2. Apply a negative pulse to induce the same state change through a compressive force.
+
+This gives us finer control over the quantum operations and may be instrumental in exploring advanced techniques such as squeezed states, where we manipulate the quantum noise of the system.
         
 - **September 21, 2025:** Successfully created a Gaussian splat with nerfstudio.
     

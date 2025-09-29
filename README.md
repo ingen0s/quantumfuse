@@ -6,7 +6,7 @@ https://github.com/user-attachments/assets/e9e66469-74c2-4346-a94c-7afd6688c967
 Example of an 823 mHz - 100 Hz pulse
 
 # Quantum Fuse: A Two-Qubit Quantum Computer
-Quantum Fuse is a theoretical and experimental project exploring the feasibility of creating a two-qubit quantum computer using accessible and affordable components. Our unique approach utilizes quantized mechanical vibrations within synthetic quartz crystals to serve as our qubits. The project is built around an ESP32 microcontroller, a green diode laser, and an AD9850 DDS module.
+Quantum Fuse is a theoretical and experimental project exploring the feasibility of creating a two-qubit quantum computer using accessible and affordable components. Our unique approach utilizes quantized mechanical vibrations within synthetic quartz crystals to serve as our qubits. The project is testing was built around an ESP32 microcontroller, a green diode laser, and an AD9850 DDS module. **We have since updated to using an FPGA, iCE40UP5K-B-EVN FPGA instead of the ESP32**. While still keeping the ESP32 as a control interface
 
   - **If you are interested in contributing, would be fantastic - if a bunch of people try to do the build it would happen much faster.**
 
@@ -25,6 +25,6 @@ This project builds a functional Michelson interferometer to measure extremely s
 The code base provides the necessary firmware for the project's electronics. The primary component is a web server running on an ESP32-S3 microcontroller that controls the AD9851 DDS generator. This allows for precise control over the frequencies and timings required for our experiments via a simple web interface.
 
   -  Firmware: The web server code for the ESP32-S3 to control the AD985x DDS module can be found here: [AD985x Web Server Code](https://github.com/ingen0s/quantumfuse/blob/main/AD985X/web_server.ino)
-
+     - **Note** This firmware code is for our initial testing purposes only, we will be repurposing the WiFi on the ESP32 to control the iCE40UP5K-B-EVN FPGA
 
 ![Q-Resonator](https://github.com/user-attachments/assets/596cce6c-0d1a-4744-a5cb-b6bc49421d15)

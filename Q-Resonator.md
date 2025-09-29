@@ -65,6 +65,8 @@ Our theoretical quantum computer would run the **Deutsch-Jozsa algorithm**. The 
     - Idle (Negative Polarity): The crystal is in its ground vibrational state (∣0⟩) and the piezo is configured for a negative-going force (compression).
         
     - Excited (Negative Polarity): The crystal is in its excited vibrational state (∣1⟩) and the piezo is configured for a negative-going force.
+    
+    - The polarity reversal does not create two new, distinct quantum energy levels; the system remains a two-level qubit (a qudit of dimension D=2)
         
 - **September 21, 2025:** Successfully created a Gaussian splat with nerfstudio.
     

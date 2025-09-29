@@ -175,7 +175,17 @@ Our theoretical quantum computer would run the **Deutsch-Jozsa algorithm**. The 
         
     3. **Perform X-Gate (if necessary):** If the measurement shows the control qubit is in the ∣1⟩ state, the FPGA would command the AD9850 to send a precise RF pulse (a "pi-pulse") to the second plate, effectively flipping its state.
         
-- **CCD Measurement Setup:** We would use a camera, like a **OV9281** with a global shutter and monochromatic, to capture the interference pattern from the interferometer. The lens would be removed to get the pattern directly on the **CCD sensor** and a fixed neutral density filter to make sure we don't damage the sensor. The camera would then stream the live video data to the **iCE40UP5K-B-EVN**, where a custom hardware module would analyze the pattern to determine the quantum state.
+### Measurement System
+
+Our project's measurement system is a critical component for observing the qubit's state. It will leverage an interferometer and advanced computational techniques to overcome environmental noise and capture the subtle changes in the quartz crystal's vibrations.
+
+- **The Interferometer:** We will use a laser to create an interference pattern that is highly sensitive to the mechanical vibrations of our quartz crystal. The laser beam will be split, with one part acting as a reference and the other reflecting off the vibrating crystal. When the beams recombine, any change in the crystal's position will cause a shift in the interference pattern.
+    
+- **The Sensor:** We will use a camera, like an **OV9281** with a global shutter, to capture the interference pattern directly on its monochromatic CCD sensor. To ensure a clear image, the lens will be removed, and a fixed neutral density filter will be used to protect the sensor from the laser. The camera will stream the raw video data at a high frame rate to a PC workstation for real-time analysis.
+    
+- **Data Processing and Noise Reduction:** On the PC workstation, we will use a dedicated software pipeline to analyze the incoming video data. This is where we will employ **machine learning and advanced mathematical techniques to decouple interference and environmental noise** from the signal. This approach is essential to make the system robust enough to detect the subtle, quantum-relevant vibrations of the quartz crystal.
+    
+- **Quantum State Measurement:** Once the noise is filtered, we will analyze the clean signal to determine the quantum state of the qubit. The frequency and phase of the signal will be correlated to the vibrational state of the crystal. By analyzing this data, we can collapse the qubit's superposition and measure its state as a classical 0 or 1.
     
 - **Gaussian Splatting Measurement:** We would use a camera, like a OV9281I, to capture live video of the laser beam passing through the crystal. A theoretical AI would then use Gaussian Splatting to create a 3D map of the crystal's vibrating lattice, providing a real-time view of the quantum state. We would also perform a separate Gaussian Splatting for the "on" and "off" states of the qubit and layer them to visually represent the state difference.
     

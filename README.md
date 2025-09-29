@@ -6,7 +6,7 @@ https://github.com/user-attachments/assets/e9e66469-74c2-4346-a94c-7afd6688c967
 Example of an 823 mHz - 100 Hz pulse
 
 # Quantum Fuse: A Two-Qubit Quantum Computer
-Quantum Fuse is a theoretical and experimental project exploring the feasibility of creating a two-qubit quantum computer using accessible and affordable components. Our unique approach utilizes quantized mechanical vibrations within synthetic quartz crystals to serve as our qubits. The project is testing was built around an ESP32 microcontroller, a green diode laser, and an AD9850 DDS module. **We have since updated to using an FPGA, iCE40UP5K-B-EVN FPGA instead of the ESP32**. While still keeping the ESP32 as a control interface
+Quantum Fuse is a theoretical and experimental project exploring the feasibility of creating a two-qubit quantum computer using accessible and affordable components. Our unique approach utilizes quantized mechanical vibrations within synthetic quartz crystals to serve as our qubits. The initial project testing was built around an ESP32 microcontroller, a green diode laser, and an AD9850 DDS module. **We have since updated to using an FPGA, iCE40UP5K-B-EVN FPGA instead of the ESP32**, while still keeping the ESP32 as a control interface.
 
   - **If you are interested in contributing, would be fantastic - if a bunch of people try to do the build it would happen much faster.**
 

@@ -33,7 +33,10 @@ To further improve the model's performance, we will use ancillary sensors to cre
 - **Microphone:** A microphone can capture **acoustic noise** in the lab (e.g., from fans or pumps). The ML model can learn to correlate specific sound frequencies with subtle vibrations in the interferometer and subtract them.
     
 - **Accelerometer:** An accelerometer can detect **seismic and vibrational noise** from the experimental table or floor. The model can use this data to predict and cancel out noise caused by these physical disturbances.
-    
+
+- **Temperature Sensor:** A temperature sensor will provide data on thermal fluctuations, which can cause components like the laser and optics to expand or contract. The model will use this data to compensate for slow, significant drift in the interferometer's path length.
+
+- **Barometer:** A barometer will measure changes in air pressure, which can affect the refractive index of the air in the interferometer's path. The ML model will learn to filter out the noise caused by these subtle atmospheric changes.
 
 ---
 

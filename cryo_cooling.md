@@ -12,8 +12,13 @@ Table 1: Comparative Feasibility of 4 K Closed-Cycle Cryocoolers for Project Q-R
 |**Cooling Power (Typical)**|1.0 W @ 4.2 K|0.25 W to 5.0 W @ 4.2 K|Low (Tactical/Low Load)|
 |**Suitability for Q-Resonator**|Low (Requires Major Isolation)|**High (Recommended)**|Moderate (Requires TRL Advancement)|
 
+Table 2: Critical Material Specification for 4 K Second-Stage Regenerator
 
-
+|**Stage**|**Operating Temperature Range**|**Material Category**|**Examples**|**Function**|
+|---|---|---|---|---|
+|First Stage (Warm)|∼80 K to ∼15 K|Standard Regenerator|Lead (Pb) Spheres|High specific heat capacity at intermediate cryogenic temperatures.|
+|Second Stage (Cold Side)|∼15 K to 4.2 K|Magnetic Compound|HoCu2, Er3Ni, Gd2O2S|Specific heat peak driven by magnetic phase transition essential for 4 K refrigeration.|
+|Second Stage (Structure)|N/A|Volume Optimizer|Bakelite Rod|Reduces consumption of high-cost magnetic materials (10-20% saving).|
 
 
 ## Research

@@ -58,6 +58,8 @@ The code base provides the necessary firmware for the project's electronics. The
 - Firmware: The web server code for the ESP32-S3 to control the AD985x DDS module can be found here: [AD985x Web Server Code](https://github.com/ingen0s/quantumfuse/blob/main/AD985X/web_server.ino)
     
     - **Note** This firmware code is for our initial testing purposes only, we will be repurposing the WiFi on the ESP32 to control the iCE40UP5K-B-EVN FPGA
+ 
+- [ Macroscopic Quantum Test with Bulk Acoustic Wave Resonators](https://www.klaus-hornberger.de/pdf/prl19.pdf)
 
 
 ![Q-Resonator](https://github.com/user-attachments/assets/596cce6c-0d1a-4744-a5cb-b6bc49421d15)

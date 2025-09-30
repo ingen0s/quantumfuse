@@ -27,11 +27,11 @@ To achieve the near-absolute-zero temperatures (target **0.1–1 K**) necessary 
 The full build guide, including components, assembly instructions, and operational procedure, is detailed here: [ADR Cryostat Build Guide](https://github.com/ingen0s/quantumfuse/blob/main/ADR_Cryostat_Build_Guide.md) 🥶
 
 ### Cryostat Outline
-* **Objective:** Construct a compact, single-stage ADR cryostat to cool the quartz crystal to below 4 K (target $\sim$0.1–1 K).
-* **Core Components:** Paramagnetic salt pill (chrome alum), 2–4 T magnet system (Neodymium blocks or solenoid), LHe Dewar ($\sim$4 K pre-cooling), Superconducting NbTi heat switch, and Cernox temperature sensor.
+* **Objective:** Construct a compact, single-stage ADR cryostat to cool the quartz crystal to below 4 K (target **~0.1–1 K**).
+* **Core Components:** Paramagnetic salt pill (chrome alum), **2–4 T** magnet system (Neodymium blocks or solenoid), LHe Dewar (**~4 K** pre-cooling), Superconducting NbTi heat switch, and Cernox temperature sensor.
 * **Assembly:** Involves fabricating the salt pill, constructing the cold stage with OFHC copper, and integrating the high-vacuum and magnet systems.
-* **Operation (Single-Shot Cycle):** Pre-cool to 4 K $\rightarrow$ Magnetize (Isothermal) $\rightarrow$ Isolate (Switch OFF) $\rightarrow$ Demagnetize (Adiabatic) to achieve base temperature.
-* **Performance Target:** Base Temperature of $\mathbf{0.1–1\ K}$ with a hold time of 10–60 minutes per run.
+* **Operation (Single-Shot Cycle):** Pre-cool to 4 K **->** Magnetize (Isothermal) **->** Isolate (Switch OFF) **->** Demagnetize (Adiabatic) to achieve base temperature.
+* **Performance Target:** Base Temperature of **0.1–1 K** with a hold time of 10–60 minutes per run.
 
 ---
 

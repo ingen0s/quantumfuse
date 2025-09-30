@@ -4,7 +4,7 @@
 
 This project is a theoretical exploration into building a two-qubit quantum computer using a green diode laser, an **iCE40UP5K-B-EVN FPGA**, an AD9850 DDS module, and two separate synthetic quartz crystals. We hypothesize that the quantized mechanical vibrations of the quartz crystals can serve as our qubits, which are controlled and measured using our available components.
 
-Cryogenics and vaccuum chamber strategy and design is in the works and will meet the criterea of accessibility and breakout standard.
+[Cryogenics](https://github.com/ingen0s/quantumfuse/blob/main/cryo_cooling.md) and vaccuum chamber strategy and design is in the works and will meet the criterea of accessibility and breakout standard.
 
 ---
 

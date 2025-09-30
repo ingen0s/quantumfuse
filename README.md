@@ -20,6 +20,21 @@ You can find the detailed theoretical framework and ongoing notes here: [Q-Reson
 
 ---
 
+## ADR Cryostat: Millikelvin Environment
+
+To achieve the near-absolute-zero temperatures (target **0.1–1 K**) necessary to eliminate thermal noise and observe the quantum mechanical properties of the quartz crystal qubits, we require an Adiabatic Demagnetization Refrigerator (ADR) cryostat.
+
+The full build guide, including components, assembly instructions, and operational procedure, is detailed here: [ADR Cryostat Build Guide](https://github.com/ingen0s/quantumfuse/blob/main/ADR_Cryostat_Build_Guide.md) 🥶
+
+### Cryostat Outline
+* **Objective:** Construct a compact, single-stage ADR cryostat to cool the quartz crystal to below 4 K (target $\sim$0.1–1 K).
+* **Core Components:** Paramagnetic salt pill (chrome alum), 2–4 T magnet system (Neodymium blocks or solenoid), LHe Dewar ($\sim$4 K pre-cooling), Superconducting NbTi heat switch, and Cernox temperature sensor.
+* **Assembly:** Involves fabricating the salt pill, constructing the cold stage with OFHC copper, and integrating the high-vacuum and magnet systems.
+* **Operation (Single-Shot Cycle):** Pre-cool to 4 K $\rightarrow$ Magnetize (Isothermal) $\rightarrow$ Isolate (Switch OFF) $\rightarrow$ Demagnetize (Adiabatic) to achieve base temperature.
+* **Performance Target:** Base Temperature of $\mathbf{0.1–1\ K}$ with a hold time of 10–60 minutes per run.
+
+---
+
 ## The Interferometer: High-Precision Measurement
 
 This project builds a functional interferometer to measure extremely small changes in distance. The FPGA will control the laser and our measurement system, which uses machine learning and advanced mathematical techniques to interpret the interference pattern and quantify changes in the optical path.

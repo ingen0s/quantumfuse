@@ -42,6 +42,8 @@ Table 3: Preliminary Component List and Estimated Specifications
 
 [Cycle schematic for RTB cryocooler with cryogenic heat sink.](https://www.researchgate.net/figure/Cycle-schematic-for-RTB-cryocooler-with-cryogenic-heat-sink_fig1_322140364)
 
+[Principles of dilution refrigeration](https://nanoscience.oxinst.com/assets/uploads/NanoScience/Brochures/Principles%20of%20dilution%20refrigeration_Sept15.pdf)
+
 [Cooling power analysis of a small scale 4 K pulse tube
 cryocooler driven by an oil-free low input power Helium
 compressor](https://arxiv.org/pdf/2311.00605)

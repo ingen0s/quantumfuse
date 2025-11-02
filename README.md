@@ -10,7 +10,8 @@ Example of an 823 mHz - 100 Hz pulse
 Quantum Fuse is a theoretical and experimental project exploring the feasibility of creating a two-qubit quantum computer using accessible and affordable components. Our unique approach utilizes quantized mechanical vibrations within synthetic quartz crystals to serve as our qubits. The initial project testing was built around an ESP32 microcontroller, a green diode laser, and an AD9850 DDS module. **We have since updated to using an FPGA, iCE40UP5K-B-EVN FPGA instead of the ESP32**, while still keeping the ESP32 as a control interface.
 
 - **If you are interested in contributing, would be fantastic - if a bunch of people try to do the build it would happen much faster.**
-    
+
+---
 
 ## The Q-Resonator: A FPGA-driven Quantum System
 
@@ -18,9 +19,20 @@ The Q-Resonator is the core of this project's hypothesis. We are investigating w
 
 You can find the detailed theoretical framework and ongoing notes here: [Q-Resonator Documentation](https://github.com/ingen0s/quantumfuse/blob/main/Q-Resonator.md) ⚛️
 
+**Update as of November 1, 2025:** Inspired by the breakthrough in large-scale optical tweezer arrays for neutral-atom quantum computing [A tweezer array with 6,100 highly coherent atomic qubits](https://www.nature.com/articles/s41586-025-09641-4), which demonstrates room-temperature trapping of over 6,100 atomic qubits with coherence times up to 12.6 seconds and imaging fidelities exceeding 99.99%, we are pivoting our approach to hybridize mechanical qubit concepts with optical trapping. This allows us to explore quantized vibrations in synthetic quartz as "messenger" modes coupled to trapped neutral atoms (e.g., cesium or rubidium), enabling scalable, room-temperature quantum interfaces without cryogenic requirements. The FPGA will handle high-speed trap modulation, while the ESP32 provides user interface and low-level DDS control. This update shelves the cryostat indefinitely (retained below for historical record), reducing complexity and cost while aligning with the tweezer breakthrough's emphasis on far-off-resonant 1064 nm trapping for low-dephasing operations.
+
+**New Plan Records (Added November 1, 2025):**
+- **Optical Tweezer Integration:** Replace green diode with 1064 nm IR laser module (e.g., Genmitsu LMC1W-IR, 1W CW) for far-off-resonant traps (~0.5–1 mK depth). Focus to 1 µm waist using aspheric lens + objective. FPGA drives PWM modulation for dynamic trap depth synced to vibration frequencies.
+- **FPGA-ESP32 Hybrid:** iCE40UP5K-B-EVN FPGA for real-time trap control (e.g., 30 kHz radial frequency modulation) and qubit readout timing. ESP32 handles web UI, AD9851 DDS for 10 Hz–10 MHz vibration pulses, and auxiliary sensors (e.g., photodiode ADC for scattered light detection).
+- **Qubit Coupling:** Synthetic quartz vibrations (piezo-driven at resonance ~1.65 MHz) couple mechanically to trapped atoms via shared mount—inducing Doppler sidebands in scattered light for quantum state readout. Target: 2-qubit entanglement via vibration-mediated interaction.
+- **Milestones:** (1) Demo trap 1–10 atoms (Q1 2026). (2) Detect 10 Hz vibration in atomic fluorescence (Q2 2026). (3) FPGA-controlled 2-qubit gate (Q3 2026).
+- **Cost Savings:** Shelving cryostat eliminates ~$5,000+ in LHe/Dewar costs; total build now ~$1,500.
+
 ---
 
-## ADR Cryostat: Millikelvin Environment
+## ADR Cryostat: Millikelvin Environment *(Shelved - November 1, 2025)*
+
+*(Historical record: Original plan for near-absolute-zero cooling to eliminate thermal noise. Shelved per tweezer breakthrough, which enables room-temperature atomic qubit control with coherence times >10 s. Retained for potential future cryogenic hybrid experiments.)*
 
 To achieve the near-absolute-zero temperatures (target **0.1–1 K**) necessary to eliminate thermal noise and observe the quantum mechanical properties of the quartz crystal qubits, we require an Adiabatic Demagnetization Refrigerator (ADR) cryostat.
 
@@ -37,7 +49,7 @@ The full build guide, including components, assembly instructions, and operation
 
 ## The Interferometer: High-Precision Measurement
 
-This project builds a functional interferometer to measure extremely small changes in distance. The FPGA will control the laser and our measurement system, which uses machine learning and advanced mathematical techniques to interpret the interference pattern and quantify changes in the optical path.
+This project builds a functional interferometer to measure extremely small changes in distance. The FPGA will control the laser and our measurement system, which uses machine learning and advanced mathematical techniques to interpret the interference pattern and quantify changes in the optical path. *(Updated November 1, 2025: Now incorporates scattered light from trapped atoms for quantum-enhanced interferometry, leveraging the tweezer array breakthrough for sub-shot-noise sensitivity.)*
 
 [Michelson interferometer](https://github.com/ingen0s/quantumfuse/blob/main/Michelson-Interferometer.md)
 
@@ -45,7 +57,7 @@ This project builds a functional interferometer to measure extremely small chang
 
 ## Measurement System & ML Denoising
 
-To achieve the precision needed for quantum measurements, our system uses a camera-based interferometer and a powerful software pipeline on a PC workstation. This approach leverages machine learning to overcome environmental noise and capture the subtle changes in the quartz crystal's vibrations.
+To achieve the precision needed for quantum measurements, our system uses a camera-based interferometer and a powerful software pipeline on a PC workstation. This approach leverages machine learning to overcome environmental noise and capture the subtle changes in the quartz crystal's vibrations. *(Updated November 1, 2025: ML now processes atomic fluorescence spectra for vibration-induced sideband detection, inspired by high-fidelity imaging in the 6,100-qubit tweezer array.)*
 
 You can find the detailed plan for the measurement system and ML-based denoising here: [Measurement Outline](https://github.com/ingen0s/quantumfuse/blob/main/measurement_outline.md)
 
@@ -53,15 +65,23 @@ You can find the detailed plan for the measurement system and ML-based denoising
 
 ## Code & Resources
 
-The code base provides the necessary firmware for the project's electronics. The primary component is a web server running on an ESP32-S3 microcontroller that controls the AD9851 DDS generator. This allows for precise control over the frequencies and timings required for our experiments via a simple web interface.
+The code base provides the necessary firmware for the project's electronics. The primary component is a web server running on an ESP32-S3 microcontroller that controls the AD9851 DDS generator. This allows for precise control over the frequencies and timings required for our experiments via a simple web interface. *(Updated November 1, 2025: FPGA-ESP32 hybrid firmware added for trap modulation; ESP32 retains DDS/vibration control.)*
 
 - Firmware: The web server code for the ESP32-S3 to control the AD985x DDS module can be found here: [AD985x Web Server Code](https://github.com/ingen0s/quantumfuse/blob/main/AD985X/web_server.ino)
-    
-    - **Note** This firmware code is for our initial testing purposes only, we will be repurposing the WiFi on the ESP32 to control the iCE40UP5K-B-EVN FPGA
+   
+    - **Note** This firmware code is for our initial testing purposes only, we will be repurposing the WiFi on the ESP32 to control the iCE40UP5K-B-EVN FPGA. **New: Hybrid Control Code** for FPGA trap pulsing + ESP32 DDS: [FPGA-ESP32 Hybrid Firmware](https://github.com/ingen0s/quantumfuse/blob/main/FPGA_ESP32_Hybrid/quantum_vibrometer.ino) (includes PWM for 1064 nm laser and atomic scattering FFT).
+
+---
 
 ## Citations
-- [ Macroscopic Quantum Test with Bulk Acoustic Wave Resonators](https://www.klaus-hornberger.de/pdf/prl19.pdf)
-- [ Millisecond Coherence in a Superconducting Qubit](https://www.osti.gov/servlets/purl/2421323)
+
+- [Macroscopic Quantum Test with Bulk Acoustic Wave Resonators](https://www.klaus-hornberger.de/pdf/prl19.pdf)
+- [Millisecond Coherence in a Superconducting Qubit](https://www.osti.gov/servlets/purl/2421323)
+- **New (November 1, 2025):** [A tweezer array with 6,100 highly coherent atomic qubits](https://www.nature.com/articles/s41586-025-09641-4) – Demonstrates scalable room-temperature neutral-atom qubits, inspiring our pivot to optical-mechanical hybrid qubits.
+
+![Q-Resonator](https://github.com/user-attachments/assets/596cce6c-0d1a-4744-a5cb-b6bc49421d15)
+
+**Example of an 823 mHz - 100 Hz pulse** (retained for vibration testing baseline).
 
 
 ![Q-Resonator](https://github.com/user-attachments/assets/596cce6c-0d1a-4744-a5cb-b6bc49421d15)
